@@ -1,0 +1,23 @@
+body{
+    background: var(--ws-bg-color);
+}
+h2{
+    color: var(--ws-fg-color);
+}
+.btn-aviso{
+    background-color: rgb(173, 82, 209);
+    color:aliceblue;
+}
+.btn-aviso:hover{
+    background-color: rgb(15, 109, 35);
+    color:aliceblue;
+}
+.btn-lista{
+    background-color: white;
+    border-color:cadetblue ;
+    border: 1px;
+    margin: 1px;
+}
+.btn-lista:hover{
+    background-color: cadetblue;
+}
