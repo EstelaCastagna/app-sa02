@@ -7,7 +7,7 @@
     <h2> Disciplinas: </h2>
     <ul class="list-group">
         @foreach($disciplinas as $disciplina)
-        <li class="list-group-item btn-lista btn-primary text-start">{{$disciplina}}</li>
+        <li class="list-group-item btn-lista btn-primary text-start lista-disc">{{$disciplina}}</li>
 
         @endforeach
     </ul>

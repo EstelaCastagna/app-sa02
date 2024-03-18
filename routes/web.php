@@ -18,6 +18,8 @@ Route::get('/', function () {
 })->name('inicio');
 
 Route::get('teste', [\App\Http\Controllers\TesteController::class, 'index'])->name('teste');
+Route::get('disciplinas', [\App\Http\Controllers\DisciplinasController::class, 'index'])
+->name('disciplina');
 
 Auth::routes();
 
