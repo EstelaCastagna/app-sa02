@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Disciplinas;
 use App\Http\Requests\StoreDisciplinasRequest;
 use App\Http\Requests\UpdateDisciplinasRequest;
+use Illuminate\Http\Request;
 
 class DisciplinasController extends Controller
 {
@@ -14,7 +15,7 @@ class DisciplinasController extends Controller
     public function index()
     {
         $disciplinas = \App\Models\Disciplinas::all();
-        return view('disciplinas', ['disciplinas'=> $disciplinas]);
+        return view('disciplinas', ['disciplinas' => $disciplinas]);
     }
 
     /**
@@ -44,17 +45,18 @@ class DisciplinasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Disciplinas $disciplinas)
+    public function edit(Request $request)
     {
-        //
+        $disciplinas = \App\Models\Disciplinas::find($request->id);
+        return view('form-disciplina', ['disciplina'=> $disciplinas]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDisciplinasRequest $request, Disciplinas $disciplinas)
+    public function update(Request $request, Disciplinas $disciplinas)
     {
-        //
+        dd($request);
     }
 
     /**

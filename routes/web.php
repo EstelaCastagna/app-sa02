@@ -18,8 +18,9 @@ Route::get('/', function () {
 })->name('inicio');
 
 Route::get('teste', [\App\Http\Controllers\TesteController::class, 'index'])->name('teste');
-Route::get('disciplinas', [\App\Http\Controllers\DisciplinasController::class, 'index'])
-->name('disciplina');
+Route::get('disciplinas', [\App\Http\Controllers\DisciplinasController::class, 'index'])->name('disciplinas');
+Route::get('editar', [\App\Http\Controllers\DisciplinasController::class, 'edit'])->name('editar');
+Route::put('atualizar/(id)', [\App\Http\Controllers\DisciplinasController::class, 'update'])->name('atualizar');
 
 Auth::routes();
 
