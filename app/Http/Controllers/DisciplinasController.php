@@ -23,7 +23,7 @@ class DisciplinasController extends Controller
      */
     public function create()
     {
-        //
+        return view('form-incluir-disciplina');
     }
 
     /**
@@ -31,7 +31,10 @@ class DisciplinasController extends Controller
      */
     public function store(StoreDisciplinasRequest $request)
     {
-        //
+        $disciplinas = new \App\Models\Disciplinas;
+        $disciplinas->create(['disciplina' => $request->disciplina]);
+
+        return Redirect()->route('disciplinas');
     }
 
     /**
@@ -56,7 +59,10 @@ class DisciplinasController extends Controller
      */
     public function update(Request $request, Disciplinas $disciplinas)
     {
-        dd($request);
+        $d = Disciplinas::find($request->id);
+        $d->disciplina = $request->disciplina;
+
+        $d->save();
     }
 
     /**

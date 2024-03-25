@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Disciplinas extends Model
 {
+    protected $fillable = ['disciplina'];
     use HasFactory;
 }

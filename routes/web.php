@@ -21,6 +21,7 @@ Route::get('teste', [\App\Http\Controllers\TesteController::class, 'index'])->na
 Route::get('disciplinas', [\App\Http\Controllers\DisciplinasController::class, 'index'])->name('disciplinas');
 Route::get('editar', [\App\Http\Controllers\DisciplinasController::class, 'edit'])->name('editar');
 Route::put('atualizar/(id)', [\App\Http\Controllers\DisciplinasController::class, 'update'])->name('atualizar');
+Route::put('incluir', [\App\Http\Controllers\DisciplinasController::class, 'store'])->name('incluir');
 
 Auth::routes();
 
