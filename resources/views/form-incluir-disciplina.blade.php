@@ -16,7 +16,7 @@
 
         <div class="card-body">
             <div class="form-group">
-                <label for="id" name="id" id="id" class="label-form"> ID</label>
+                <label for="id" name="id" id="id" class="label-form">ID</label>
                 <input type="number" name="id" id="id" class="form-control" value= "" readonly />
             </div>
             <div class="form-group">

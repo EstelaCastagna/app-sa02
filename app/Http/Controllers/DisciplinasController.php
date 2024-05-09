@@ -29,7 +29,7 @@ class DisciplinasController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDisciplinasRequest $request)
+    public function store(Request $request)
     {
         $disciplina = new \App\Models\Disciplinas;
         $disciplina->create(['disciplina' => $request->disciplina]);
@@ -69,8 +69,11 @@ class DisciplinasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Disciplinas $disciplinas)
+    public function destroy(int $id)
     {
-        //
+        $d = Disciplinas::find($id);
+        $d->delete();
+        return Redirect()->route('disciplinas');
+
     }
 }
