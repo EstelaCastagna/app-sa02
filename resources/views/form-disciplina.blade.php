@@ -1,17 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <form class="card" action="{{route('atualizar')}}" method="POST">
+    <form class = "card" action="{{ route('atualizar') }}" method= "POST">
 
-        @method=('PUT')
+
+        @method('PUT')
         @csrf
+
 
         <div class="card-header">
             <div class="card-title">
                 Editando disciplina
+                <div class="card-body">
+
+                    <a href="{{ route('novo') }}" class="btn btn-primary">Nova Disciplina</a>
+
+
+                </div>
             </div>
 
         </div>
+
 
         <div class="card-body">
             <div class="form-group">
@@ -30,6 +39,7 @@
 
         <div class="card-footer">
             <div class="btn-group">
+                <a href ="{{ route('disciplinas') }}" type="submit" class="btn btn-info">Inicio</a>
                 <button type="submit" class="btn btn-warning">Atualizar</button>
                 <button type="reset" class="btn btn-primary">Limpar</button>
             </div>

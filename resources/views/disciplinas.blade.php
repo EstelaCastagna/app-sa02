@@ -21,6 +21,8 @@
                     <td><a href="{{ route('editar', ['id' => $disciplina->id]) }}" class="btn btn-info btn-sm">Editar</a>
 
                         <a href="{{ route('editar') }}" class="btn btn-danger btn-sm">Excluir</a>
+
+                        <a href="{{ route('novo') }}" class="btn btn-warning btn-sm">Novo</a>
                     </td>
                 </tr>
             @endforeach

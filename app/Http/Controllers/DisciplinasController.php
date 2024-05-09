@@ -31,8 +31,8 @@ class DisciplinasController extends Controller
      */
     public function store(StoreDisciplinasRequest $request)
     {
-        $disciplinas = new \App\Models\Disciplinas;
-        $disciplinas->create(['disciplina' => $request->disciplina]);
+        $disciplina = new \App\Models\Disciplinas;
+        $disciplina->create(['disciplina' => $request->disciplina]);
 
         return Redirect()->route('disciplinas');
     }
@@ -63,6 +63,7 @@ class DisciplinasController extends Controller
         $d->disciplina = $request->disciplina;
 
         $d->save();
+        return Redirect()->route('disciplinas');
     }
 
     /**
