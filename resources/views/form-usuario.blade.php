@@ -13,7 +13,7 @@
                 Editando Usuário
                 <div class="card-body">
 
-                    <a href="{{ route('atualizarUser') }}" class="btn btn-primary">Atualizar Usuário</a>
+                    <a href="{{ route('novoUser') }}" class="btn btn-primary">Cadastrar Usuário</a>
 
 
                 </div>
@@ -31,7 +31,43 @@
             <div class="form-group">
                 <label for="usuario" class="label-form">Usuário</label>
                 <input type="text" name="usuario" id="usuario" class="form-control"
-                    value="{{ $usuarios->usuarios }}" />
+                    value="{{ $usuarios->usuario }}" />
+            </div>
+
+            <div class="form-group">
+                <label for="nome" class="label-form">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control"
+                    value="{{ $usuarios->nome }}" />
+            </div>
+
+            <div class="form-group">
+                <label for="cpf" class="label-form">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="form-control"
+                    value="{{ $usuarios->cpf }}" />
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="label-form">Email</label>
+                <input type="text" name="email" id="email" class="form-control"
+                    value="{{ $usuarios->email }}" />
+            </div>
+
+            <div class="form-group">
+                <label for="dataNascimento" class="label-form">Data de Nascimento</label>
+                <input type="text" name="dataNascimento" id="dataNascimento" class="form-control"
+                    value="{{ $usuarios->dataNascimento }}" />
+            </div>
+
+            <div class="form-group">
+                <label for="telefone" class="label-form">Telefone</label>
+                <input type="text" name="telefone" id="telefone" class="form-control"
+                    value="{{ $usuarios->telefone }}" />
+            </div>
+
+            <div class="form-group">
+                <label for="senha" class="label-form">Senha</label>
+                <input type="text" name="senha" id="senha" class="form-control"
+                    value="{{ $usuarios->senha }}" />
             </div>
 
 
