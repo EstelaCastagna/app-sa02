@@ -3,6 +3,7 @@
 @section('content')
     <table class="table table-hover table-striped">
         <thead>
+            
             <tr>
                 <td>ID</td>
                 <td>Usuário:</td>
@@ -24,15 +25,16 @@
 
                         <a href="{{ route('excluirUser', ['id' => $usuarios->id]) }}" class="btn btn-danger btn-sm">Excluir</a>
 
-                        <a href="{{ route('novoUser') }}" class="btn btn-warning btn-sm">Novo</a>
+                       
                     </td>
                 </tr>
             @endforeach
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="5">
+                <th colspan="7">
                     Numero de registros: {{ \App\Models\Usuario::count() }}
+                    <a href="{{ route('novoUser') }}" class="btn btn-warning btn-sm">Cadastrar Novo Usuário</a>
                 </th>
             </tr>
         </tfoot>
