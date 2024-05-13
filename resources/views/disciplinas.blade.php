@@ -22,7 +22,7 @@
 
                         <a href="{{ route('excluir', ['id' => $disciplina->id]) }}" class="btn btn-danger btn-sm">Excluir</a>
 
-                        <a href="{{ route('novo') }}" class="btn btn-warning btn-sm">Novo</a>
+                       
                     </td>
                 </tr>
             @endforeach
@@ -30,6 +30,7 @@
         <tfoot>
             <tr>
                 <th colspan="5">
+                 <a href="{{ route('novo') }}" class="btn btn-warning btn-sm">Novo</a>
                     Numero de registros: {{ \App\Models\Disciplinas::count() }}
                 </th>
             </tr>
