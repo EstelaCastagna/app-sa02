@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('senha');
             $table->string('dataNascimento');
-            $table->integer('telefone');
+            $table->string('telefone');
             $table->timestamps();
         });
     }

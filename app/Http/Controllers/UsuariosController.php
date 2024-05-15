@@ -76,6 +76,12 @@ class UsuariosController extends Controller
     {
         $u = Usuario::find($request->id);
         $u->usuario = $request->usuario;
+        $u->email = $request->email;
+        $u->cpf = $request->cpf;
+        $u->nome = $request->nome;
+        $u->senha = $request->senha;
+        $u->dataNascimento = $request->dataNascimento;
+        $u->telefone = $request->telefone;
 
         $u->save();
         return Redirect()->route('usuarios');
