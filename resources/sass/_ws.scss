@@ -1,5 +1,5 @@
 body{
-    background: var(--ws-bg-color);
+    background-color: #E3E2E2 ;
 }
 h2{
     color: var(--ws-fg-color);
@@ -9,7 +9,7 @@ h2{
     color:aliceblue;
 }
 .btn-aviso:hover{
-    background-color: rgb(15, 109, 35);
+    background-color: yellow;
     color:aliceblue;
 }
 .btn-lista{
@@ -24,4 +24,27 @@ h2{
 .lista-disc{
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
+}
+
+.btn-search{
+    background-color: #FEAF00;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-size: 15px;
+    transition: 0.5s ease;
+}
+
+.btn-search:hover{
+    background-color: #be8812;
+}
+
+.nav-link-shadow {
+    transition: 0.3s ease;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.nav-link-shadow:hover {
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
